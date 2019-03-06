@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="lib.js"></script>
+    <style>
+      .red {
+        background: red;
+      }
+      .blue {
+        background: blue;
+      }
+    </style>
+  </head>
+  <body>
+    This is a demonstrator page. Mostly empty.
+    <div id="app-container"></div>
+    <script>
+      const container = document.getElementById("app-container");
+      // Usage example
+      container.appendChild(
+        div("red", [
+          span(["TEST TWO"], { onclick: () => console.log("lala") }),
+          div(["LALA"], "blue", { style: "color:white;" }),
+          div(["Hello"], el =>
+            el.addEventListener("click", () => console.log("lala"))
+          )
+        ])
+      );
+    </script>
+  </body>
+</html>
